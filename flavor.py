@@ -21,3 +21,13 @@ def commitFlavor():
     newRow = len(usedFlavors.col_values(1)) + 1
     usedFlavors.update_cell(newRow, 1, str(date.today()))
     usedFlavors.update_cell(newRow, 2, flavorOfTheFortnite)
+
+def main():
+    commit = input(f'{flavorOfTheFortnite} : Is this that good good? (Y/N) ')
+    if commit.upper() == 'Y':
+        commitFlavor()
+    else:
+        print(f'{flavorOfTheFortnite} was not writen to the usedFlavors sheet.')
+
+if __name__ == "__main__":
+    main()
